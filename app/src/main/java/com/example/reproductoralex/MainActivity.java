@@ -95,11 +95,38 @@ public class MainActivity extends AppCompatActivity {
                 arrastrando = false; // El usuario ha soltado la barra
             }
         });
+
     }
 
     // Método para formatear los milisegundos a mm:ss
     private String formatearTiempo(long ms) {
         long segundos = ms / 1000;
         return String.format(Locale.getDefault(), "%02d:%02d", segundos / 60, segundos % 60);
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Arrancamos el Handler para que la barra empiece a moverse
+        handler.post(actualizarBarra);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // Si salimos de la app, pausamos la música y paramos la barra
+        if (player != null && player.isPlaying()) {
+            player.pause();
+        }
+        handler.removeCallbacks(actualizarBarra);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Si se cierra la app, liberamos el reproductor de la memoria
+        if (player != null) {
+            player.release();
+            player = null;
+        }
     }
 }

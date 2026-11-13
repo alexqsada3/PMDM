@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Reproductor Lucía</string>
+    <string name="app_name">Reproductor Alex</string>
     <string name="titulo_cancion">Retu</string>
-    <string name="autor_cancion">Autor de la canción</string> <!-- Pon el autor real -->
+    <string name="autor_cancion">kopito de nieve</string> <!-- Pon el autor real -->
     <string name="tiempo_inicial">00:00</string>
     <string name="play">Play</string>
     <string name="pausa">Pausa</string>
