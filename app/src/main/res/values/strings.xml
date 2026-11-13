@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Reproductor Lucía</string>
+    <string name="titulo_cancion">Retu</string>
+    <string name="autor_cancion">Autor de la canción</string> <!-- Pon el autor real -->
+    <string name="tiempo_inicial">00:00</string>
+    <string name="play">Play</string>
+    <string name="pausa">Pausa</string>
+    <string name="titulo_efectos">Efectos de sonido</string>
+    <string name="efecto1">Clash Royale</string>
+    <string name="efecto2">Michael Jackson</string>
+    <string name="efecto3">Roblox</string>
+    <string name="efecto4">Fahhh</string>
+</resources>
